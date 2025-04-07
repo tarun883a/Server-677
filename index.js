@@ -66,9 +66,9 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("successfully", ()=> {
-    sendLogToClients(`${successfully}`);
-console.log(`${successfully}`)
+  socket.on("successfully", ({success})=> {
+    sendLogToClients(`${success}`);
+console.log(`${success}`)
 
   });
 
